@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex47varscope</title>
+</head>
+<body>
+    <h1>전역변수, 지역변수, 매개변수(지역변수 일종)</h1>
+    <script>
+        var global="전역변수";
+
+        function hello(){
+            var local="지역변수"; //hello() 함수내에서만 살아있음 호출이끝나면 사라짐
+            aaa=100;//var를 생략하고 변수를 선언하고 초기화 => 전역변수
+            alert('global: '+global);
+            alert('local '+local);
+        }
+        function hi(){
+            alert('hi---------');
+            alert('global: '+global);
+            //alert('local: '+local); //hello()의 지역변수라 사용이안됨
+        }
+        function bye(name){//name:매개변수=> 지역변수
+            //name: 매개변수는 var를 생략하고 변수명만 기술함
+            alert('Bye Bye~'+name);
+            alert('aaa: '+aaa);
+        }
+
+        hello();
+        hi();
+        bye('gon');
+    </script>
+    
+</body>
+</html>

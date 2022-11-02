@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex52quiz.html</title>
+</head>
+<body>
+    <h1>적정 체중을 구하는 프로그램</h1>
+    <div>
+        [실습] 이름, 키, 몸무게를 prompt로 입력받아서 적정 체중을 구한뒤<br>
+        테이블 형태로 출력하세요.<br>
+        이름 홍길동<br>
+        키   188cm<br>
+        몸무게 65kg<br>
+        적정체중: kg<br>
+
+        적정체중 = (키 - 100)값의 90% 정도를 적정체중으로 합니다.<br>
+    </div>
+    <hr color="brown">
+    <script>
+        var name = prompt("이름을 입력하세요");
+        var height = parseInt(prompt("키를 입력하세요"));
+        var weight = parseInt(prompt("몸무게 입력하세요"));
+
+        var bmi=function(){
+            var bmi=(height-100)*0.9
+            return bmi;
+        }
+        var result=function(){
+            //var bmi=parseInt(bmi);
+            //var w=parseInt(w);
+            if(weight>bmi()*1.1){
+                return "<span style='color:red;'>과체중입니다<span>";
+            }
+            else if(bmi()*0.9<=weight && weight<=bmi()*1.1){
+                return "<span style='color:green;'>정상체중입니다<span>";
+            }            
+            else{
+                return "<span style='color:blue;'>체중미달입니다<span>";
+            }                        
+        }
+
+    </script>
+    <div>
+        <table border="1">
+            <tr>
+                <td>이름</td>
+                <td>
+                    <script>document.write(name)</script>
+                </td>
+            </tr>
+            <tr>
+                <td>키</td>
+                <td><script>document.write(height+"cm")</script></td>
+            </tr>
+            <tr>
+                <td>몸무게</td>
+                <td><script>document.write(weight+"kg")</script></td>
+            </tr>
+            <tr>
+                <td>적정체중</td>
+                <td><script>document.write(bmi()+"kg")</script></td>
+            </tr>
+            <tr>
+                <td>과체중유무</td>
+                <td><script>document.write(result())</script></td>
+            </tr>
+        </table>
+    </div>
+    
+</body>
+</html>

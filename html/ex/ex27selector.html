@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex27selector</title>
+    <style>
+        input{
+            padding: 5px;
+            margin: 5px;
+        }
+        /* input요소 중 text인 요소만 선택해서 글자색을 blue로 주세요 
+            -속성 선택자
+            ex)  tag명[type=text or value=포커스가...]{...}
+        */
+        input[type=text]{
+            color:blue;
+        }
+        input[type=password]{
+            background-color: antiquewhite;
+        }
+        /* 선택자:focus 선택자에 포커스가 왔을 때*/
+        /* text인 요소에 포커스 오면 글자색 red로 password=>green*/
+        input[type=text]:focus{
+            color: red;
+        }
+        input[type=password]:focus{
+            color: green;
+            border: thick dashed violet
+        }
+        /* input 요소중에 disabled 된 요소를 찾아서 글자색*/
+        input:disabled+span{
+            color:red;
+        }
+        input:enabled+span{
+            color:blue;
+        }
+        input:checked+span{
+            color:orange;
+        }
+    </style>
+</head>
+<body>
+    <h1>가상클래스선택자</h1>
+    <input type="text" value="포커스가 오면 red로"><br>
+    <input type="password" value="포커스가 오면 green으로"><br>
+    <hr>
+    <label for="gender1"><input type="radio" name="gender" id="gender1" value="Male">Male</label>
+    <label for="gender2"><input type="radio" name="gender" id="gender2" value="Female">Female</label>
+    <!-- 라디오나 셀렉트같은걸 라벨로 감싸면 글씨를 클릭해도 체크나 해제됨 -->
+    <hr>
+    <label for="ck1"><input type="checkbox" id="ck1" value="bicycle"><span>I have a bicycle</span></label>
+    <label for="ck2"><input type="checkbox" id="ck2" value="car"><span>I have a car</span></label>
+    <label for="ck3"><input type="checkbox" id="ck3" disabled value="motorcycle"><span>I have a motorcycle</span></label>
+</body>
+</html>

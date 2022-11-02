@@ -1,0 +1,110 @@
+@charset "UTF-8";
+*{
+    margin:0;
+    padding: 0;
+}
+#imgbox,#rightbox,#leftbox,#footbox{
+    box-sizing: border-box;
+    border-radius: 5px;
+    border: 1px solid gray;
+}
+a{
+    text-decoration: none;
+}
+a:not(.rhdwlbox>ul>a)/*공지사항 링크제외*/{
+    color: #727377;
+}
+li{
+    list-style: none;
+}
+ul,p{
+    padding-left: 15px;
+}
+#wrap{
+    width: 800px;
+    height: auto;
+    margin:auto;
+    padding:0;
+    background-color: white;
+}
+/* -- boxs wrap -- */
+
+#topbox{
+    width: 100%;
+    height: 234px;
+    /*border 고려해서 4px추가*/
+}
+#imgbox{
+    width: 100%;
+    height: 200px;
+    background-image: url(../../images/ex43image.JPG);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+#topmenu{
+    width: 100%;
+    height: 30px;
+    background-color: gainsboro;
+}
+#topmenu>a>li{
+    width: 100px;
+    height: 100%;
+    line-height: 30px;
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    float:left;
+}
+#topmenu>a>li:hover{
+    background-color: #1d1d20;
+}
+
+/* ----Topbox------ */
+#container{
+    width: 100%;
+    height: 600px;
+}
+#leftbox{
+    float: left;
+    width: 80%;
+    height: 100%;
+    /* background-color: red; 구분용 */
+}
+#leftbox>div{
+    border: 3px solid greenyellow;
+    width: 45%;
+    float:left;
+    margin: 10px 10px;
+}
+#leftbox>div>ul{
+    font-weight: bold;
+    font-size: 20px;
+    color: blue;
+}
+#leftbox>div>ul>a{
+    font-weight: 500;
+    font-size: 15px;
+}
+#rightbox{
+    float: right;
+    width: 19%;
+    height: 100%;
+    /* background-color: blue; 구분용 */
+}
+#rightbox>ul{
+    margin:20px 0px;
+}
+/* ------#container------ */
+
+#footbox{
+    width: 100%;
+    margin-top:10px;
+    height: 40px;
+    background-color: rgb(205, 240, 203);
+    /* background-color: green; */
+}
+#footbox>a{
+    line-height: 40px;
+    font-size: 0.8em;
+    color: blue;
+    margin-left:20px;
+}

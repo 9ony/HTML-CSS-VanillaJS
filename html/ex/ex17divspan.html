@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Div&Span</title>
+    <style type="text/css">
+        div{
+            background-color: #aaccff; /*배경색*/
+            width:300px; /*넓이*/
+            margin:10px; /*바깥 여백*/
+            padding:20px; /*안쪽 여백*/
+
+        }
+        /*
+        inline요소들은 width, height가 적용되지 않음
+        display: inline-block으로 주면 적용됨
+        */
+        span{
+            background-color: pink;
+            width: 200px; 
+            height: 80px; /*높이*/
+            padding:8px;
+            margin: 5px;
+            display:inline-block ;
+        }
+    </style>
+</head>
+<body>
+    <h1>공간분할 태그 (div, span)</h1>
+    <h2>블럭요소: div , 인라인요소: span</h2>
+    <hr>
+    <div>하늘</div>
+    <div>땅</div>
+    <div>바다</div>
+    <hr color="red">
+    <span>봄</span>
+    <span>여름</span>
+    <span>가을</span>
+    <span>겨울</span>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex09table</title>
+</head>
+<body>
+    <h1>테이블(표) - table태그 (3행2열)</h1>
+    <!-- table 표만드는 태그
+            tr=행(y축) td=열(x축)
+    -->
+    <table border="1px" width="80%" height="200" align="center">
+        <tr>
+            <th>제목1</th>
+            <th>제목2</th>
+        </tr>
+        <!-- 1행 -->
+        <tr>
+            <td>1행1열</td>
+            <td>1행2열</td>
+        </tr>
+        <!-- 2행 -->
+        <tr>
+            <td>2행1열</td>
+            <td>2행2열</td>
+        </tr>
+        <!-- 3행 -->
+        <tr>
+            <td>3행1열</td>
+            <td>3행2열</td>
+        </tr>
+    </table>
+    <hr color="red">
+    <table border="1" width="80%" align="center" bordercolor="skyblue"
+    height="180" bgcolor="beige" cellpadding="20" cellspacing="0" background="../images/flower1.jpg">
+        <thead bgcolor="navy" style="color:white">
+            <tr>
+                <th>번호</th>
+                <th>이름</th>
+                <th>연락처</th>
+                <th>주소</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td bgcolor="hotpink" style="color: white">홍길동</td>
+                <td>010-2222</td>
+                <td>서울 영등포구</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>김철수</td>
+                <td background="../images/dog2.jpg">010-3333</td>
+                <!-- 배경이미지 넣기 -->
+                <td>경기도 고양</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

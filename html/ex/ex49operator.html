@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex49operator</title>
+</head>
+<body>
+    <h1>연산자(Operater)</h1>
+    <script>
+        //1. 산술연산자(+,-,*,/,%)
+        var a = 10;
+        var b = 3;
+
+        function print(str){
+            document.write(str,"<br>");
+        }
+
+        print(a+b); // 덧셈
+        print(a-b); // 뺄셈
+        print(a*b); // 곱셈
+        print(a/b); // 나누기
+        print(a%b); // 나눈 나머지
+        print("<hr>");
+        //2. 관계 연산자 동일유무
+        /* == : 값이 같은가? 같으면 true, 다르면 false
+           != : 값이 다른가? 다르면 true, 다르면 false
+           =  : 대입연산자, 할당연산자
+        */
+
+        print(a==b);
+        print(a!=b);
+        var c=3.0;
+        var d="10";
+
+        print(b==c); //true 값만같으면 
+        print(a==d); //true 위와 동일
+        // == 값이같으면 true지만 === 는 type도 똑같아야한다
+        print("<hr color:'red'>");
+        print(a===d); //false 값은같으나 number와 string이라서 
+        print(b===c); //true 값도 같고 number임
+        print(a===c); //false 값은 다르고 둘다 number
+
+        document.write("a의 type은"+typeof a+" "+"d의 type은"+ typeof d+"<br>");
+        document.write("b의 type은"+typeof b+" "+"c의 type은"+ typeof c+"<br>");
+        
+        print("<br>");
+
+        //3. 관계 연산자 크기비교 > , >= , <, <=
+        let x=77;
+        let y=33;
+        let z=77.0;
+        print(x>y); //true
+        print(x>z); //false
+        print(z>=x); //false
+        print(x>=z); //true
+
+        print("<br>");
+        
+        var m=5;
+        var n=9;
+
+        m++;
+        n--;
+
+        print("m="+m);
+        print("n="+n);
+
+        ++m;
+        --n;
+
+        print("m="+m);
+        print("n="+n);
+
+        var i=10;
+        var j=7;
+        var k=i++;//k값과 i값은?
+        print("k="+k);//10
+        print("i="+i);//11
+
+        var q=++j;
+
+        print("q="+q); //8
+        print("j="+j); //8
+        print("<br>");
+
+        var o= --i + j++;
+        print("o="+o);//18
+        print("i="+i);//10
+        print("j="+j);//9
+
+    </script>
+</body>
+</html>

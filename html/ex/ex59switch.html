@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex59switch</title>
+</head>
+<body>
+    <h1>switch~case문을 이용한 실습</h1>
+    prompt로 "가고싶은 포탈 사이트 이름을 입력하세요" 
+    메시지를 띄우고 입력을 받는다. (ex. 네이버, 구글....)<br>
+    switch~case문 이용해서 해당 사이트로 이동하는 프로그램을 작성하세요 (location객체 이용)
+    <hr color="red">
+    <script>
+        let input=prompt('가고싶은 사이트 입력');
+        let str=''
+        switch(input){
+            case '네이버':
+            str='http://www.naver.com'
+            break;
+            case '다음':
+            str='http://www.daum.com'
+            break;
+            case '구글':
+            str='http://www.google.com'
+            break;
+            default:
+                alert(input+"사이트를 찾을수 없습니다!");
+                window.location.reload();
+        }
+        alert(input+"으로 이동하겠습니다!");
+        //window.location.href=str;
+
+    let win=window.open(str,"popup","width=500px","height=500px");
+    //팝업으로열기 window.open(주소,팝업,넓이,높이);
+
+    </script>
+</body>
+</html>

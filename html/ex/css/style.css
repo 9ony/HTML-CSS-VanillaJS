@@ -1,0 +1,17 @@
+@charset "UTF-8";
+body{
+    color:blueviolet;
+    font-size: 2em;
+    /* em: 상대적 크기
+        1em : 16px
+        2em : 32px
+        ...
+    */
+}
+
+div{
+    font-family: 궁서체;
+    color: aqua;
+    font-weight: bold;
+    margin:1em;
+}

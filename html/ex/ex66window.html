@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex66window</title>
+    <style>
+        #circle{
+            background-color: blueviolet;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <h2>window객체의 setTimeout()/clearTimeout()활용</h2>
+    <h2>window객체의 setInterval()/clearInterval()활용</h2>
+    <button onclick="show()">Click Me</button>
+    <button onclick="go()">Go Go</button>
+    <button onclick="stop()">Stop</button>
+    <button onclick="goGoogle()">3초 뒤에 구글로 이동</button>
+    <button onclick="move()">Move</button>
+    <hr>
+    <div id="circle"></div>
+    <script>
+        const show=function(){
+            //let obj=document.getElementById('circle');
+            let obj=document.querySelector("#circle");
+            obj.style.display='block';
+            //obj.style.backgroun-color='orange'; [x]
+            obj.style.backgrounColor='orange'; 
+            //자바스크립트에선 -는 연산자이기 때문에 -붙은뒤에 알파벳을 대문자로바꾼다(camel표기법)
+        }
+        const go=function(){
+            //let obj=document.getElementById('circle');
+            let obj=document.querySelector("#circle");
+            //window.setTimeput(함수,밀리초) : 밀리초 이후에 함수를 한번만 호출한다
+            //wid=window.setTimeout(show,3000); //3초 뒤에 show()함수를 호출함
+            wid=window.setTimeout(move,3000);
+        }
+        const stop=function(){
+            window.clearTimeout(wid);
+        }
+        const move=function(){
+            let obj=document.querySelector("#circle");
+            //#circle의 x좌표를 500px 위치로 이동시키는 코드 작성하세요
+            //go()함수 내에서 setTimeout()에 move전달해보기
+            obj.style.position='absolute';
+            obj.style.left='500px';
+        }
+        const goGoogle=function(){
+            //window.setTimeout(google, 3000);
+
+            // setTimeout(function(){
+            //     location.href='http://www.naver.com';
+            // },3000)
+
+            //ES6 화살표 함수: ()=>{}
+            setTimeout(()=>{
+                location.href='http://www.google.com';
+            }, 3000);    
+        }
+        const google = function() {
+            window.location.href = "http://www.google.com";
+        }
+    </script>
+</body>
+</html>

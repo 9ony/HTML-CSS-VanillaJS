@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex60for</title>
+</head>
+<body>
+    <h1>반복문 - for 루프문</h1>
+    <!-- 
+        for(let 변수=초기값; 조건식; 증감식){
+            실행문;
+        }
+     -->
+     <script>
+        for(let i=1;i<=30;i++)
+            document.write(`<h3>Hello JavaScript ${i}</h3>`);
+        
+        //hi 5 hi 4 ..~ hi2
+        for(let i=5;i>=1;i--)
+            document.write(`<h3>Hi${i}</h3>`);
+        //[1]for루프를 이용해서 구구단의 7단을 출력해보세요
+        for(let i=1;i<=9;i++){
+            let x=1;
+            document.write(`<h3>${x}*${i}=${x*i}</h3>`)
+        }
+
+        //[2] prompt로 구구단의 단을 입력받아서 구구단을 table형태로 출력하세요
+        //    단, 짝수단이면 table의 배경색을 gold로 주고, 홀수단이면 skyblue로 주세요
+        document.write('<table border="1px">')
+        for(let j=1;j<=9;j++){
+            if(j%2==0){
+                document.write(`<tr style="background-color:gold;"><th>${j}단</th>`)
+            }else
+            document.write(`<tr style="background-color:skyblue;"><th>${j}단</th>`);
+            for(let i=1;i<=9;i++){
+                document.write(`<td>${j}*${i}=${j*i}</td>`)
+            }
+            document.write('</tr>');
+        }
+        document.write('</table>');
+        document.write('<hr>');
+        //document.write()로 출력
+        let dan = Number(prompt("구구단몇단?"));
+        document.write('<table border="1px">')
+        if(dan%2==0){
+            document.write(`<tr style="background-color:gold;"><th>${dan}단</th>`)
+        }else
+            document.write(`<tr style="background-color:skyblue;"><th>${dan}단</th>`);
+            for(let i=1;i<=9;i++){
+                document.write(`<td>${dan}*${i}=${dan*i}</td>`)
+            }
+            document.write('</tr>')
+        document.write('</table>')
+        document.write('<hr>');
+        //str에저장해서 출력
+        let str=''
+        str+='<table border="1px">';
+        if(dan%2==0){
+            color='gold;';
+        }else
+            color='skyblue;';  
+        str+=`<tr style="background-color:${color};"><th>${dan}단</th>`;
+            for(let i=1;i<=9;i++){
+                str+=`<td>${dan}*${i}=${dan*i}</td>`;
+            }
+        str+='</tr></table>';
+        document.write(str);
+
+     </script>
+</body>
+</html>

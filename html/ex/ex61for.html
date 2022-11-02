@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>중첩 for루프</h1>
+    <script>
+        //* 3행 5열
+        for(let j=0;j<3;j++){
+            for(let i=0;i<5;i++){
+                document.write("★");
+            }
+            document.write("<br>");
+        }
+        document.write("<hr>");
+        // * 5행 당 1개씩증가
+        for(let j=0;j<5;j++){//행
+            for(let k=0;k<=j;k++){
+                document.write("★");
+            }
+            document.write("<br>");
+        }
+        // 구구단
+        document.write('<table border="1px">')
+            for(let j=1;j<=9;j++){//행의조건
+                document.write(`<tr><th>${j}단</th>`);
+                for(let i=1;i<=9;i++){//열의조건
+                    document.write(`<td>${j}*${i}=${j*i}</td>`)
+                }
+                document.write('</tr>');
+            }
+    </script>
+</body>
+</html>

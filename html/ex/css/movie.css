@@ -1,0 +1,47 @@
+@charset "UTF-8";
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+}
+body{
+    position: relative;
+    background-color: black;
+}
+#wrap{
+    width:800px;
+    margin: auto; 
+    /*background-color: aqua;*/ 
+}
+#btns{
+    width: 300px;
+    height: 30px;
+    margin: auto;
+}
+span{
+    display: block;
+    float:left;
+    width: 30%;
+    margin:0px 5px;
+    text-align: center;
+    line-height: 30px;
+    color: blue;
+    background-color: antiquewhite;
+}
+#movies{
+    position: relative;
+    width: 80%;
+    top:100px;
+    left: 50%;
+    transform: translate(-50%); 
+    /*현재 자신의 넓이값의 50%을 왼쪽으로 당김*/
+    /* background-color: gold;  */
+    /*자식이 inline속성의 태그면 html 코드작성시 
+      엔터 영향을받아 여백 추가되는 문제가있는것같아 자식태그에 -4px추가*/
+}
+img{
+    margin-bottom:-4px;
+    width: 20%;
+    height: 170px;
+}

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex55let</title>
+</head>
+<body>
+    <h1>var, let, const</h1>
+    <script>
+        var a=10; //전역변수
+        let b=20; //block level scope
+        document.write("a: ",a,"<br>");
+        document.write("b: ",b,"<br>");
+
+        if(a>0){
+            var a=300;//전역변수 a 블럭벗어나도 300으로 살아있음
+            let b=400;//지역변수 b 블럭벗어나면 소멸
+
+            document.write("if block 안 a: ", a,"<br>");
+            document.write("if block 안 b: ", b,"<br>");
+        }
+
+        document.write("a: ",a,"<br>");//300
+        document.write("b: ",b,"<br>");//20
+        document.write("<hr>");
+
+
+        var x = 'hello';
+        let y = 'hi';
+        document.write("x: ",x,"<br>");
+        document.write("y: ",y,"<br>");
+
+        var x=9.12; //동일 변수명으로 재사용가능
+        //let y=2.12; //let변수는 동일명으로 중복선언 X
+        y=2.12; //let을다시쓰려면 y로 선언
+        document.write("x: ",x,"<br>");
+        document.write("y: ",y,"<br>");
+
+        document.write(i,"<br>"); //undefined
+        //document.write(j,"<br>"); //에러
+
+        var i='tiger'; //hoisting이 되지만 값은선언되지 않았다고뜸
+        let j='lion'; //let 변수는 hoisting [x]
+        document.write(i,"<br>");
+        document.write(j,"<br>");
+        document.write("<hr>");
+
+        const NONE=0; //선언후 변경할 수가 없음
+        let add=1;
+        document.write(NONE,"<br>");
+        document.write(add,"<br>");
+        add=100;
+        //NONE=1; // error가난다
+        document.write(NONE,"<br>");
+        document.write(add,"<br>");
+
+        let edit;
+        const update='ok';
+
+    </script>
+</body>
+</html>

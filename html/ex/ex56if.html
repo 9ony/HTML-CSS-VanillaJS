@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex56if</title>
+</head>
+<body>
+    <h1>조건문 - if, if~ else</h1>
+    <!-- 
+        if(조건식){
+            실행문;
+        }
+     -->
+     <script>
+        let num=Number(prompt('숫자를 입력하세요'));
+        document.write("num: ",num,"<br>");
+        if(num>0){
+            document.write(`<h2>${num}은 양수입니다</h2>`);
+            document.write("<h2>"+num+"은 양수입니다</h2>");
+        }
+        document.write("<h2>The End~~~</h2>");
+        //입력받은 숫자가 짝수이면 "Evem", 홀수면 "Odd"를 출력하는 문장을 작성하세요
+        if(num%2==0){
+            document.write(`<h2>${num}은 짝수입니다</h2>`);
+        }
+        else{
+            document.write(`<h2>${num}은 홀수입니다</h2>`);
+        }
+
+        //삼항 연산자로 바꿔보기
+        document.write("<hr>");
+        let str=(num%2==0)?"Even":"Odd";
+        document.write(str,"<br>");
+        
+        //or
+
+        let str2=(num%2==0)?document.write(`even`):document.write(`odd`);
+        document.write("<br>");
+
+        document.write("<h2>The End~~~</h2>");
+
+     </script>
+     
+</body>
+</html>

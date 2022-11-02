@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex07image</title>
+</head>
+<body>
+    <h1>이미지 - img태그</h1>
+    <img src="../images/dog1.jpg" width="300px" height="200px" alt="강아지사진">
+    <img src="../images/dog2.JPG" width="30%" alt="강아지사진2">
+    <img src="../images/tiger.jpg" alt="호랑이이미지입니다">
+    <hr color="red">
+    <!-- 상대경로로 1개 절대경로로 1개 50% 이미지표시 -->
+    <img src="../images/ground1.JPG" width="45%" alt="배경1">
+    <img src="http://localhost/images/ground2.jpg" width="45%" alt="배경2">
+    <!-- 상대경로 : 현재위치에서 ../ <<상위폴더로감 
+         절대경로는 기본적으로 '/'는 로컬호스트로 설정됨
+         "http://localhost/images/ground2.jpg" 와 "/images/ground2.jpg"와 같음
+    -->
+    <hr color="blue">
+    <figure>
+        <a href="ex01.html"><img src="../images/flower1.JPG" alt="꽃사진"></a>
+        <figcaption>아름다운 꽃</figcaption>
+    </figure>
+    <!-- 네이버로고 이미지 보여주고 링크 걸어주세요 -->
+    <figure>
+        <a href="http://www.naver.com" target="_blank"><img src="../images/naverlogo.JPG" alt="네이버로고"></a>
+        <figcaption>네이버 로고</figcaption>
+    </figure>
+</body>
+</html>

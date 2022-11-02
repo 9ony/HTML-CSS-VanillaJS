@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex76event.html</title>
+    <style>
+        input{
+            width: 400px;
+            padding: 3px;
+        }
+        #chat{
+            width: 500px;
+            height: 500px;
+            border: 1px solid silver;
+            margin: 1em;
+        }
+    </style>
+    <script>
+        window.onload=function(){
+            //input에 값을 입력하면 해당 입력값을 얻어서 id가 chat인 div 요소안에 해당값을 출력하세요
+            //keydown 이벤트 처리
+            objmsg=document.getElementById('msg');
+            objchat=document.getElementById('chat');
+
+            objmsg.onkeydown=function(e){
+                    //alert(e.ketcode);
+                    //console.fog(this.value)
+                    if(e.keycode==13){//엔터값을 입력했다면
+                    let str=this.value;
+                    objchat.innerHTML+=`<h4>${str}</h4>`
+                    this.value='';
+                    this.focus();
+                }
+                console.log(e.target); //e.target=>이벤트가 발생된 객체
+                e.target.style.boder='1px solid red';
+            }
+        }
+    </script>
+</head>
+<body>
+    <div>
+        <label for="msg">메시지:</label>
+        <input type="text" name="msg" id="msg">
+    </div>
+    <div id="chat">
+
+    </div>
+</body>
+</html>

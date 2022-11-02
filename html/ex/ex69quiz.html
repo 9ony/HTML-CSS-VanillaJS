@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/movie.css">
+    <title>실습5</title>
+</head>
+<body>
+    <div id="wrap">
+        <div id="btns">
+            <span id="btn1" onclick="showMovie()">현재상영작</span>
+            <span id="btnPlay" onclick="play()">Play</span>
+            <span id="btnStop" onclick="stop()">Stop</span>
+        </div>
+        <div id="movies">
+        </div>
+    </div>
+    <script>
+        let movies=['m1.JPG','m2.JPG','m3.JPG','m4.JPG','m5.JPG'];
+        let obj=document.querySelector("#movies");
+        let state = Array(null,'right'); //[0]=null,플레이정지 , [1]=오른쪽왼쪽 이동유무
+        let objleft = getComputedStyle(obj); //obj의스타일을 json형태로 가져온다.
+        let leftvalue = parseInt(objleft.left); //#obj의 left값을 가져온다
+        let movepx=5;
+        showMovie = () =>{
+            //let obj=document.querySelector("#movies");
+            let str='';
+            for(let k in movies){
+                let movie=movies[k];
+                str+=`<img src="../images/${movie}">`;
+            }
+            //document.write(str); <<문서위에 덮어씀
+            obj.innerHTML=str; // << obj객체 위에 str(string)추가
+        }
+        play = () =>{
+            if(state[0]==null){
+                state[0]=window.setInterval(()=>{
+                        if(leftvalue<200){
+                            state[1]='right';
+                        }else if(leftvalue>1000){
+                            state[1]='left';
+                        }
+                    (state[1]=='right')?
+                    leftvalue+=movepx: //state[1]이 right면 오른쪽이동
+                    leftvalue-=movepx; //아니면 left
+                    obj.style.left=`${leftvalue}px`;
+                },50);
+            }
+        }
+        stop = () =>{
+            if(state[0]!=null){
+            window.clearTimeout(state[0]);
+            state[0]=null
+            }
+        }
+    </script>
+</body>
+</html>
