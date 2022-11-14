@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex01.html</title>
+    <!-- <script src="jquery-3.6.1.min.js"></script> -->
+    <!-- cdn방식 >> <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script>
+        //window.onload 를안해주면 밑에 a값 id div에 접근을 못함 위에서부터 차례대로
+        //읽기 때문에 window.onload로 다로드되면 안에 명령실행
+        window.onload=function(){
+        let obj=document.getElementById("a");
+        obj.innerHTML="<h1>Hello JavaScript</h1>";
+        }
+        //아이디가 b인  요소 찾아서 Hi JQuery를 넣어보자
+        //[1] jquery방법1
+        $(document).ready(function(){
+            $('#b').html("<h1>Hi JavaScript</h1>");
+            //원래 형식 FM방식
+            window.jQuery('#b').html("<h1>안녕 jQuery</h1>");
+        })
+        //[2] jquery방법2
+        //아이디가 c인 요소 찾아서 "bye jQuery" 문자열 남기기
+        $(function(){
+            $('#c').html("<h1>bye jQuery</h1>")
+            .css("color","green")
+            .css('border','2px dashed tomato');
+        })
+    </script>
+
+</head>
+<body>
+    <h1>jQuery 시작하기</h1>
+   <p>jQuery: 자바스크립트 라이브러리</p>
+   <p>1. 다운로드: http://jquery.com<br>
+               http://jqueryui.com[확장 기능 제공]<br>
+      2. CDN방식: Content Delivery Network           
+   
+   </p>
+    <div id="a"></div>
+    <div id="b"></div>
+    <div id="c"></div>
+</body>
+</html>
